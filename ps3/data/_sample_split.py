@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import numpy as np
 
+
 def create_sample_split(df, id_column, training_frac=0.8):
     """Create sample split based on ID column.
 
@@ -23,7 +24,7 @@ def create_sample_split(df, id_column, training_frac=0.8):
 
     df = df.copy()
 
-    if not 0 <= training_frac <= 1:
+    if not 0 < training_frac < 1:
         raise ValueError("training_frac must be between 0 and 1")
 
     # Convert IDs into integers
